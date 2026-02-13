@@ -1,0 +1,19 @@
+mixin sightingCard(sighting)
+
+    div.card
+        div.card-content
+            div.top
+                p= sighting.type
+            div.middle
+                div.petImageContainer
+                    img(class="petImage" src=sighting.image)
+                div.petDescription
+                    p.description= sighting.description // Description of pet, Suspected Breed, Color, Collar or not, etc.
+            div.bottom
+                div.sightingInfo
+                    p.address= sighting.address
+                    p.city= sighting.city
+                    p.state= sighting.state
+                    p.date= sighting.date
+                    p.otherInfo= sighting.other
+            // If you are the owner of the card add an edit button

@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  div.container
+    form(action='/' method='get')
+      div.filter-input
+        label(for='type') Type of animal
+        select(id='type' name='type' autocomplete='off')
+          each type in types
+            option(value=type selected=(type === searchtype)) #{type}
+        button.button.filter(type='submit') Filter
+  if user
+    a(class="addButton" href='/add') Add pet
+  div.card-container
+    each pet in pets
+      div.card
+        div.card-content
+          div.top
+            h2.petName= pet.name
+          div.middle
+            div.petImageContainer
+              img(class="petImage" src= pet.image)
+            div.petDescription
+              p.description= pet.description
+          div.bottom
+            div.petInformation
+              div.specifics
+                p= pet.type
+                p.lastKnownLocation Last known Location
+                p.date Missing for ___ amount of time (We will have to update this)
+              div.contactInfo
+                p.phoneNumber (###)-###-####
+                p.emailAddress name@contactsite.com
+          if user
+            if(user.id === pet.uzer_id)
+              a(href=`/edit/${pet.id}`) Edit pet

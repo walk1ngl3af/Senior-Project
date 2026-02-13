@@ -1,0 +1,29 @@
+mixin sightingForm(animal, actionURL, mode)
+
+    form(method="post" action=actionURL)
+        label(for="animalType") Animal Type
+        input(type="text" id="animalType" name="animalType" value=sighting.animalType)
+
+        label(for="imageCheck") Image?
+        input(type="checkbox" id="imageCheck" name="imageCheck" value=sighting.imageTorF)
+
+        label(for="image") Image URL
+        input(type="text" id="image" name="image")
+
+        label(for="animalDescription") Description
+        input(type="text" id="animalDescription" name="animalDescription")
+
+        label(for="addressLine1") Address
+        input(type="text" id="addressLine1" name="addressLine1")
+
+        label(for="city") City
+        input(type="text" id="city" name="city")
+
+        lable(for="state") State (CA, WA, etc.)
+        input(type="text" id="state" name="state")
+
+        label(for="date") Date
+        input(type="date" id="date" name="date")
+
+        label(for="other") Other Information
+        input(type="text" id="other" name="other")

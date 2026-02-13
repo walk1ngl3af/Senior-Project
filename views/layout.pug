@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav
+      div.the-title The Title
+
+      div.nav-content
+        ul
+          li
+            a(href="/") Cards
+          li
+            a(href="/forum") Sighting Cards (Forum page)
+          if user
+            li
+              div Hello #{user.displayName}
+              a(href=`/profile/${user.id}`) Profile
+            li
+              a(href='/logout') Log Out
+          else
+            li
+              a(href='/login') Login
+            li
+              a(href="/register") Register
+      div
+    div.container
+      div.content-container
+        block content
