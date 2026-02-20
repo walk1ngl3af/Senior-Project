@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    div
+        p Use this link to turn files into links
+        a(href='https://www.image2url.com/file-to-url' target='_blank') ImageToUrl
+    br
+    form(action='/addSightings' method='post')
+        div.form-input
+            label(for='type') Type of Animal
+            select(name ='type' id='type' autocomplete='off')
+                each type in types
+                    option(value=type selected=(type === searchtype) autocomplete='off') #{type}
+        div.form-input
+            label(for='description') Description:
+            input(type='text' name='description' id='description')
+        div.form-input
+            label(for='image') Image:
+            input(type='text' name='image' id='image')
+        button.button(class="submit" type='submit') Submit
+        a.button(class="cancel" href='/') Cancel

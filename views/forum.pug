@@ -2,7 +2,7 @@ extends layout
 
 block content
     if user
-        a(class="addButton" href='/add') Add pet
+        a(class="addButton" href='sightings/addSightings') Add pet
     div.filter-input
         label(for='type') Type of animal
         select(id='type' name='type' autocomplete='off')
@@ -25,7 +25,7 @@ block content
                         p.date Date and Time
                         p.otherInfo Other Info
                 if user
-                    a(href=`/edit/`) Edit pet
+                    a(href=`/editSighting/1`) Edit pet
         div.card
             div.card-content
                 div.top top

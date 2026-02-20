@@ -33,6 +33,11 @@ router.get('/delete/:id', addUserToViews, petController.deletePet);
 //Sightings
 router.get('/forum',addUserToViews, sightingController.forum);
 
+router.get('/sightings/addSightings', addUserToViews, redirectGuests, sightingController.renderAddSighting);
+router.post('/sightings/addSightings', addUserToViews, sightingController.addSighting);
+
+router.get('/editSightings:id', addUserToViews, redirectGuests, sightingController.renderEditSighting);
+
 //Users
 router.get('/register', addUserToViews, userController.renderRegistration)
 router.post('/register', addUserToViews, userController.registerUser)
