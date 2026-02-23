@@ -34,8 +34,8 @@ router.get('/delete/:id', addUserToViews, petController.deletePet);
 //Sightings
 router.get('/forum',addUserToViews, sightingController.forum);
 
-router.get('/sightings/addSightings', addUserToViews, redirectGuests, sightingController.renderAddSighting);
-router.post('/sightings/addSightings', addUserToViews, sightingController.addSighting);
+router.get('/addSightings', addUserToViews, redirectGuests, sightingController.renderAddSighting);
+router.post('/addSightings', addUserToViews, sightingController.addSighting);
 
 router.get('/editSightings:id', addUserToViews, redirectGuests, sightingController.renderEditSighting);
 router.post('/editSightings:id', addUserToViews, sightingController.updateSighting);

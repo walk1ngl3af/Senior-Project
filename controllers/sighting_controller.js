@@ -39,7 +39,7 @@ module.exports.addSighting = async function(req, res) {
             uzer_id: req.user.id
         }
     );
-    res.redirect('/sightings');
+    res.redirect('/forum');
 }
 
 module.exports.renderEditSighting = async function(req, res) {
