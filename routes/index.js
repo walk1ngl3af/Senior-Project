@@ -3,6 +3,7 @@ var router = express.Router();
 const petController = require('../controllers/pet_controller');
 const userController = require('../controllers/user_controller');
 const sightingController = require('../controllers/sighting_Controller');
+const deleteSightingController = require("../controllers/sighting_controller");
 
 function addUserToViews(req, res, next) {
     if(req.user) {
@@ -37,6 +38,9 @@ router.get('/sightings/addSightings', addUserToViews, redirectGuests, sightingCo
 router.post('/sightings/addSightings', addUserToViews, sightingController.addSighting);
 
 router.get('/editSightings:id', addUserToViews, redirectGuests, sightingController.renderEditSighting);
+router.post('/editSightings:id', addUserToViews, sightingController.updateSighting);
+
+router.get('/deleteSightings:id', deleteSightingController.deleteSighting);
 
 //Users
 router.get('/register', addUserToViews, userController.renderRegistration)
@@ -45,5 +49,4 @@ router.get('/login', addUserToViews, userController.renderLogin)
 router.post('/login', addUserToViews, userController.authenticate)
 router.get('/logout', addUserToViews, userController.logout)
 
-router.get('/profile/:id', addUserToViews ,userController.renderProfile)
 module.exports = router;

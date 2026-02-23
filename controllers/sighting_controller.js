@@ -1,4 +1,4 @@
-const {Sightings} = require('../models');
+const {Sightings, Pet} = require('../models');
 const types = ['Dog', 'Cat', 'Other'];
 
 module.exports.forum = async function(req, res) {
@@ -39,10 +39,36 @@ module.exports.addSighting = async function(req, res) {
             uzer_id: req.user.id
         }
     );
-    res.redirect('/');
+    res.redirect('/sightings');
 }
 
 module.exports.renderEditSighting = async function(req, res) {
     const sighting = await Sightings.findByPk(req.params.id);
     res.render('editSighting', {sighting});
+}
+
+module.exports.updateSighting = async function(req, res) {
+    await Sightings.update(
+        {
+            type: req.body.type,
+            date: req.body.date,
+            description: req.body.description,
+            image: req.body.image
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        });
+    res.redirect('/');
+}
+
+module.exports.deleteSighting = async function(req, res) {
+    await Sightings.destroy(
+        {
+            where: {
+                id: req.params.id
+            }
+        });
+    res.redirect('/');
 }
