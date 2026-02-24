@@ -60,7 +60,7 @@ module.exports.updateSighting = async function(req, res) {
                 id: req.params.id
             }
         });
-    res.redirect('forum');
+    res.redirect('/forum');
 }
 
 module.exports.deleteSighting = async function(req, res) {
@@ -70,5 +70,5 @@ module.exports.deleteSighting = async function(req, res) {
                 id: req.params.id
             }
         });
-    res.redirect('forum');
+    res.redirect('/forum');
 }
