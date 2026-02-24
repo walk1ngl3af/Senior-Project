@@ -10,34 +10,21 @@ block content
                 option(value=type selected=(type === searchtype)) #{type}
         button.button.filter(type='submit') Filter
     div.card-container
-        div.card
-            div.card-content
-                div.top
-                    h2 Type of Animal
-                div.middle
-                    div.petImageContainer
-                        img(class="petImage" src="https://www.creativefabrica.com/wp-content/uploads/2022/03/25/Cat-Silhouette-Embroidery-27825094-1-1-580x387.jpg")
-                    div.petDescription
-                        p.description Description of pet, Suspected Breed, Color, Collar or not, etc.
-                div.bottom
-                    div.sightingInfo
-                        p.address State and Address
-                        p.date Date and Time
-                        p.otherInfo Other Info
-                if user
-                    a(href=`/editSighting/1`) Edit pet
-        div.card
-            div.card-content
-                div.top top
-                div.middle mid
-                div.bottom bot
-        div.card
-            div.card-content
-                div.top top
-                div.middle mid
-                div.bottom bot
-        div.card
-            div.card-content
-                div.top top
-                div.middle mid
-                div.bottom bot
+        each sighting in sightings
+            div.card
+                div.card-content
+                    div.top
+                        h2.sightingName= sighting.type
+                    div.middle
+                        div.petImageContainer
+                            img(class="petImage" src=sighting.image)
+                        div.petDescription
+                            p.description= sighting.description
+                    div.bottom
+                        div.sightingInfo
+                            p.address State and Address
+                            p.date= sighting.date
+                            p.otherInfo Other Info
+                    if user
+                        if(user.id === sighting.uzer_id)
+                            a(href=`/editSightings/${sighting.id}`) Edit pet

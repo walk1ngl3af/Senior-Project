@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+    form(action=`/editSightings/${sighting.id}` method='post')
+        div.form-input
+        div.form-input
+            label(for='description') Description:
+            input(type='text' name='description' id='description' value=sighting.description)
+        div.form-input
+            label(for='image') Image:
+            input(type='text' name='image' id='image' value=sighting.image)
+        button.button(class="submit" type='submit') Submit
+        a.button(class="delete" href=`/delete/${sighting.id}`) Delete
+        a.button(class="cancel" href='/') Cancel

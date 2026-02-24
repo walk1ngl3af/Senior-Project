@@ -44,7 +44,7 @@ module.exports.addSighting = async function(req, res) {
 
 module.exports.renderEditSighting = async function(req, res) {
     const sighting = await Sightings.findByPk(req.params.id);
-    res.render('editSighting', {sighting});
+    res.render('sightings/editSightings', {sighting});
 }
 
 module.exports.updateSighting = async function(req, res) {
@@ -60,7 +60,7 @@ module.exports.updateSighting = async function(req, res) {
                 id: req.params.id
             }
         });
-    res.redirect('/');
+    res.redirect('forum');
 }
 
 module.exports.deleteSighting = async function(req, res) {
@@ -70,5 +70,5 @@ module.exports.deleteSighting = async function(req, res) {
                 id: req.params.id
             }
         });
-    res.redirect('/');
+    res.redirect('forum');
 }
