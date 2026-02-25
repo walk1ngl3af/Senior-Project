@@ -40,7 +40,7 @@ router.post('/addSightings', addUserToViews, sightingController.addSighting);
 router.get('/editSightings/:id', addUserToViews, sightingController.renderEditSighting);
 router.post('/editSightings/:id', addUserToViews, sightingController.updateSighting);
 
-router.get('/deleteSightings:id', deleteSightingController.deleteSighting);
+router.get('/deleteSightings/:id', deleteSightingController.deleteSighting);
 
 //Users
 router.get('/register', addUserToViews, userController.renderRegistration)
