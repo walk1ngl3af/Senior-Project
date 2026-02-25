@@ -36,7 +36,10 @@ module.exports.addPet = async function(req, res) {
             description: req.body.description,
             image: req.body.image,
             uzer_id: req.user.id,
-            type: req.body.type
+            type: req.body.type,
+            phone: req.body.phone,
+            date: req.body.date,
+            location: req.body.location
         }
     );
     res.redirect('/');
@@ -52,7 +55,11 @@ module.exports.updatePet = async function(req, res) {
         {
             name: req.body.name,
             description: req.body.description,
-            image: req.body.image
+            image: req.body.image,
+            type: req.body.type,
+            phone: req.body.phone,
+            date: req.body.date,
+            location: req.body.location
         },
         {
             where: {

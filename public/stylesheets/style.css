@@ -146,6 +146,8 @@ nav li a:hover{
   width: 275px;
   border: 1px solid black;
   border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .description {
@@ -244,9 +246,9 @@ nav li a:hover{
 }
 
 .filter-input {
-    padding: 8px;
-    border: 1px solid black;
-    max-width: 15%;
+  padding: 8px;
+  border: 1px solid black;
+  max-width: 15%;
 }
 
 .filter:hover {
@@ -319,4 +321,19 @@ label{
   margin-bottom: 8px;
 }
 
-/* endregion
+/* endregion */
+
+/* region  Pet Information Image Styling */
+
+.petInfo1 {
+  position: fixed;
+  right: 690px;
+  top: 290px;
+  width: 10%;
+  height: 23%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* endregion */

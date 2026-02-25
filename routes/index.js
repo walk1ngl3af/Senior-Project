@@ -3,7 +3,7 @@ var router = express.Router();
 const petController = require('../controllers/pet_controller');
 const userController = require('../controllers/user_controller');
 const sightingController = require('../controllers/sighting_Controller');
-const deleteSightingController = require("../controllers/sighting_controller");
+const infoController = require('../controllers/info_controller');
 
 function addUserToViews(req, res, next) {
     if(req.user) {
@@ -40,7 +40,10 @@ router.post('/addSightings', addUserToViews, sightingController.addSighting);
 router.get('/editSightings/:id', addUserToViews, sightingController.renderEditSighting);
 router.post('/editSightings/:id', addUserToViews, sightingController.updateSighting);
 
-router.get('/deleteSightings/:id', deleteSightingController.deleteSighting);
+router.get('/deleteSightings/:id', sightingController.deleteSighting);
+
+//Pet Information
+router.get('/info',addUserToViews, infoController.info);
 
 //Users
 router.get('/register', addUserToViews, userController.renderRegistration)

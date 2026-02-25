@@ -49,8 +49,3 @@ module.exports.logout = function (req, res, next) {
         res.redirect('/login');
     });
 }
-
-module.exports.renderProfile = async function (req, res) {
-    const Cuser = await User.findByPk(req.params.id);
-    res.render('users/profile', {Cuser})
-}

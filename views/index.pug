@@ -2,13 +2,14 @@ extends layout
 
 block content
   div.container
-    form(action='/' method='get')
-      div.filter-input
-        label(for='type') Type of animal
-        select(id='type' name='type' autocomplete='off')
-          each type in types
-            option(value=type selected=(type === searchtype)) #{type}
-        button.button.filter(type='submit') Filter
+    div.filter-input
+      form(action='/' method='get')
+        div.form-input
+          label(for='type') Type of animal
+          select(id='type' name='type' autocomplete='off')
+            each type in types
+              option(value=type selected=(type === searchtype)) #{type}
+        button.button(type='submit') Filter
   if user
     a(class="addButton" href='/add') Add pet
   div.card-container
@@ -25,12 +26,10 @@ block content
           div.bottom
             div.petInformation
               div.specifics
-                p= pet.type
-                p.lastKnownLocation Last known Location
-                p.date Missing for ___ amount of time (We will have to update this)
+                p.lastKnownLocation= `Last Known Location: ${pet.location}`
+                p.date= `Lost Since: ${pet.date}`
               div.contactInfo
-                p.phoneNumber (###)-###-####
-                p.emailAddress name@contactsite.com
+                p.phoneNumber= `Phone Number: ${pet.phone}`
           if user
             if(user.id === pet.uzer_id)
               a(href=`/edit/${pet.id}`) Edit pet
