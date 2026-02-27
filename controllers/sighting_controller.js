@@ -36,6 +36,7 @@ module.exports.addSighting = async function(req, res) {
             image: req.body.image,
             description: req.body.description,
             date: req.body.date,
+            location: req.body.location,
             uzer_id: req.user.id
         }
     );
@@ -53,7 +54,8 @@ module.exports.updateSighting = async function(req, res) {
             type: req.body.type,
             date: req.body.date,
             description: req.body.description,
-            image: req.body.image
+            image: req.body.image,
+            location: req.body.location
         },
         {
             where: {

@@ -8,7 +8,7 @@ block content
     form(action='/addSightings' method='post')
         div.form-input
             label(for='type') Type of Animal
-            select(name ='type' id='type' autocomplete='off')
+            select(name='type' id='type' autocomplete='off')
                 each type in types
                     option(value=type selected=(type === searchtype) autocomplete='off') #{type}
         div.form-input
@@ -20,5 +20,8 @@ block content
         div.form-input
             label(for='date') Date:
             input(type='date' name='date' id='date')
+        div.form-input
+            label(for='location') Location:
+            input(type='text' name='location' id='location')
         button.button(class="submit" type='submit') Submit
         a.button(class="cancel" href='/forum') Cancel

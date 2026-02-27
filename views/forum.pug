@@ -22,9 +22,8 @@ block content
                             p.description= sighting.description
                     div.bottom
                         div.sightingInfo
-                            p.address State and Address
-                            p.date= sighting.date
-                            p.otherInfo Other Info
+                            p.address= `Last seen: ${sighting.location}`
+                            p.date= `Sighted on ${sighting.date}`
                     if user
                         if(user.id === sighting.uzer_id)
                             a(href=`/editSightings/${sighting.id}`) Edit pet
