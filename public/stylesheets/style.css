@@ -323,17 +323,104 @@ label{
 
 /* endregion */
 
-/* region  Pet Information Image Styling */
+/* region Pet Information Image Styling */
+
+/* region Pet Images */
+
+/* Dog Image */
+.dogImage {
+  padding: 4px;
+  display: flex;
+  justify-content: space-around;
+}
 
 .petInfo1 {
-  position: fixed;
-  right: 690px;
-  top: 290px;
-  width: 10%;
-  height: 23%;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+/* Cat Image */
+.catImage {
+  padding: 4px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.petInfo2 {
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* endregion */
+
+.infoTitle {
+
+}
+
+.infoText {
+  font-size: 16px;
+}
+
+.petInformation {
+  border: 1px solid red;
+  margin-bottom: 2.5%;
+}
+
+
+
+/* region Dog div */
+
+.dogColumn {
+  width: 78.5%;
+}
+
+.dogInformation {
+  border: 1px solid blue;
+  margin-bottom: 2.5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.dogBehavior {
+  border: 1px solid orange;
+  display: flex;
   flex-wrap: wrap;
+}
+
+.dogRetrieval {
+  border: 1px solid pink;
+}
+
+/* endregion */
+
+/* region Cat div */
+
+.catColumn {
+  width: 40%;
+}
+
+.catInformation {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2.5%;
+}
+
+.catBehavior {
+  border: 1px solid orange;
+  padding: 8px;
+}
+
+.catRetrieval {
+  border: 1px solid blue;
+  padding: 8px;
+}
+
+/* endregion */
+
+.sources {
+  padding-left: 3%;
 }
 
 /* endregion */
