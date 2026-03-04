@@ -5,11 +5,11 @@ block content
     div.filter-input
       form(action='/' method='get')
         div.form-input
-          label(for='type') Type of animal
+          label(class="filterLabel" for='type') Type of animal
           select(id='type' name='type' autocomplete='off')
             each type in types
               option(value=type selected=(type === searchtype)) #{type}
-        button.button(type='submit') Filter
+        button.filter-button(type='submit') Filter
   if user
     a(class="addButton" href='/add') Add pet
   div.card-container
@@ -24,7 +24,7 @@ block content
             div.petDescription
               p.description= pet.description
           div.bottom
-            div.petInformation
+            div.cardInformation
               div.specifics
                 p.lastKnownLocation= `Last Known Location: ${pet.location}`
                 p.date= `Lost Since: ${pet.date}`

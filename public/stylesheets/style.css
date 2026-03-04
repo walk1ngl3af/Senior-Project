@@ -236,6 +236,12 @@ nav li a:hover{
 
 /* region Filter */
 
+.filterLabel {
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+}
+
 .filter {
   width: 90%;
   border: 1px solid black;
@@ -248,7 +254,9 @@ nav li a:hover{
 .filter-input {
   padding: 8px;
   border: 1px solid black;
-  max-width: 15%;
+  max-width: 10%;
+  display: flex;
+  justify-content: left;
 }
 
 .filter:hover {
@@ -256,14 +264,21 @@ nav li a:hover{
   color: #000000;
 }
 
+.filter-button {
+  background: cornflowerblue;
+  border: 2px solid royalblue;
+  color: white;
+  border-radius: 5px;
+}
+
 /* region Dropdown Menu */
 
 select {
-  background: antiquewhite;
+  background: whitesmoke;
 }
 
 option {
-  background: red;
+  background: whitesmoke;
 }
 
 /* endregion */

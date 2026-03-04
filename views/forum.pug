@@ -4,11 +4,13 @@ block content
     if user
         a(class="addButton" href='/addSightings') Add pet
     div.filter-input
-        label(for='type') Type of animal
-        select(id='type' name='type' autocomplete='off')
-            each type in types
-                option(value=type selected=(type === searchtype)) #{type}
-        button.button.filter(type='submit') Filter
+        form(action='/' method='get')
+            div.form-input
+                label(class="filterLabel" for='type') Type of animal
+                select(id='type' name='type' autocomplete='off')
+                    each type in types
+                        option(value=type selected=(type === searchtype)) #{type}
+            button.filter-button(type='submit') Filter
     div.card-container
         each sighting in sightings
             div.card
