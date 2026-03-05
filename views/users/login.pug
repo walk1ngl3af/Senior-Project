@@ -1,15 +1,16 @@
 extends ../layout
 
 block content
-    div
-        h3 Login
-        form(action='/login' method='post')
-            div
-                label(for='email') Email
-                input(type='text' name='email' id='email')
-                label(for='password') Password
-                input(type='text' name='password' id='password')
-            div
+    div.signIn
+        div.signTop
+            h3 Login
+            a(href='/register') or create an account
+        div.signBot(style="display:flex;")
+            form(action='/login' method='post' style="flex-direction: row")
+                div
+                    input(type='text' name='email' id='email' placeholder='Email')
+                div
+                    input(type='text' name='password' id='password' placeholder='Password')
                 button.button(type='submit') Log In
-        if error
-            p.error=error
+            if error
+                p.error=error

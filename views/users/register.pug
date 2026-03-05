@@ -1,17 +1,17 @@
 extends ../layout
 
 block content
-    form(action='/register' method='post')
-        div
-            label(for='name') Name
-            input(type='text' name='name' id='name')
-        div
-            label(for='password') Password
-            input(type='text' name='password' id='password')
-        div
-            label(for='email') Email
-            input(type='text' name='email' id='email')
-        div
-            button.button(type='submit') Register
-    if error
-        p.error=error
+    div
+        h3 Register
+        a(href='/login') If you already have an account
+        form(action='/register' method='post')
+            div
+                input(type='text' name='name' id='name' placeholder='Name')
+            div
+                input(type='text' name='password' id='password' placeholder='Password')
+            div
+                input(type='text' name='email' id='email' placeholder='Email')
+            div
+                button.button(type='submit') Create Account
+        if error
+            p.error=error

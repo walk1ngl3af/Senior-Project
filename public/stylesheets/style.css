@@ -38,17 +38,17 @@ nav ul{
 
 .the-title{
   font-size: 20px;
-  padding-left: 64px;
+  padding-left: 3%;
 }
 
 nav li{
-  width: 30%;
+  width: 20%;
   align-content: center;
 }
 
 nav li a{
   display: block;
-  padding: 20px 30px;
+  padding: 10%;
   color: #0083cd;
   font-size: 18px;
 }
