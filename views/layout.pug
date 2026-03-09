@@ -17,7 +17,7 @@ html
             a(href="/info") Helpful Info
           if user
             li
-              div Hello #{user.displayName}
+              div.name Hello #{user.displayName}
             li
               a(href='/logout') Log Out
           else
@@ -27,6 +27,6 @@ html
               a(href="/register") Register
       div
     div.container
+      //Remove content-container and then restyle accordingly
       div.content-container
         block content
-
