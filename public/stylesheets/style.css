@@ -58,7 +58,7 @@ nav li a:hover{
   color: #0700cd;
   background-color: #f1f1f1;
   border-radius: 15px;
-  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 .nav-content{
@@ -218,8 +218,12 @@ nav li a:hover{
 
 .lastKnownLocation {
   border: 1px solid black;
-  padding: 4px;
+  padding: 8px;
   border-radius: 8px;
+}
+
+.date {
+  /* Figure out how to make this always appear under the location */
 }
 
 .editButton {
@@ -352,6 +356,34 @@ label{
 .form-input {
   margin-bottom: 8px;
 }
+
+/* region Login */
+
+.email {
+  padding: 4px;
+}
+
+.password {
+  padding: 4px;
+}
+
+/* endregion */
+
+/* region Register */
+
+.registerName {
+  padding: 4px;
+}
+
+.registerPassword {
+  padding: 4px;
+}
+
+.registerEmail {
+  padding: 4px;
+}
+
+/* endregion */
 
 /* endregion */
 

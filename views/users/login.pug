@@ -6,10 +6,10 @@ block content
             h3 Login
             a(href='/register') or create an account
         div.signBot(style="display:flex;")
-            form(action='/login' method='post' style="flex-direction: row")
-                div
+            form(action='/login' method='post' style="flex-direction: row;")
+                div.email
                     input(type='text' name='email' id='email' placeholder='Email')
-                div
+                div.password
                     input(type='text' name='password' id='password' placeholder='Password')
                 button.button(type='submit') Log In
             if error
