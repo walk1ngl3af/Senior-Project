@@ -121,6 +121,8 @@ nav li a:hover{
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 .card-content{
@@ -278,6 +280,9 @@ nav li a:hover{
   max-width: 10%;
   display: flex;
   justify-content: left;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
 }
 
 .filter:hover {
@@ -395,7 +400,9 @@ label{
 .dogImage {
   padding: 4px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  width: auto;
+  height: 50%;
 }
 
 .petInfo1 {
@@ -409,7 +416,9 @@ label{
 .catImage {
   padding: 4px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  width: auto;
+  height: 50%;
 }
 
 .petInfo2 {
@@ -433,6 +442,7 @@ label{
 .petInformation {
   border: 1px solid red;
   margin-bottom: 2.5%;
+  border-radius: 10px;
 }
 
 
@@ -445,19 +455,26 @@ label{
 
 .dogInformation {
   border: 1px solid blue;
-  margin-bottom: 2.5%;
   display: flex;
   flex-direction: row;
+  margin-bottom: 2.5%;
+  border-radius: 10px;
 }
 
 .dogBehavior {
   border: 1px solid orange;
   display: flex;
   flex-wrap: wrap;
+  border-radius: 10px;
+  margin-right: 1.5%;
+  line-height: 2;
 }
 
 .dogRetrieval {
   border: 1px solid pink;
+  margin-right: 1.5%;
+  border-radius: 10px;
+  line-height: 2;
 }
 
 /* endregion */
@@ -473,16 +490,21 @@ label{
   display: flex;
   flex-direction: row;
   margin-bottom: 2.5%;
+  border-radius: 10px;
 }
 
 .catBehavior {
   border: 1px solid orange;
   padding: 8px;
+  border-radius: 10px;
+  line-height: 2;
 }
 
 .catRetrieval {
   border: 1px solid blue;
   padding: 8px;
+  border-radius: 10px;
+  line-height: 2;
 }
 
 /* endregion */
