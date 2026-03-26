@@ -363,6 +363,18 @@ label{
 
 /* region Login */
 
+.login {
+
+}
+
+.loginTop {
+
+}
+
+.loginBottom {
+
+}
+
 .email {
   padding: 4px;
 }
@@ -374,6 +386,11 @@ label{
 /* endregion */
 
 /* region Register */
+
+.registerTop {
+  display: flex;
+  flex-wrap: nowrap;
+}
 
 .registerName {
   padding: 4px;
@@ -510,6 +527,14 @@ label{
 
 .sources {
   padding-left: 3%;
+  display: flex;
+  flex-direction: column;
+}
+
+.source {
+  margin-bottom: 20px;
+  font-size: 16px;
+  max-width: 50%;
 }
 
 /* endregion */

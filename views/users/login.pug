@@ -1,11 +1,11 @@
 extends ../layout
 
 block content
-    div.signIn
-        div.signTop
+    div.loginIn
+        div.loginTop
             h3 Login
             a(href='/register') or create an account
-        div.signBot(style="display:flex;")
+        div.loginBottom(style="display:flex;")
             form(action='/login' method='post' style="flex-direction: row;")
                 div.email
                     input(type='text' name='email' id='email' placeholder='Email')
