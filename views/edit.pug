@@ -24,6 +24,12 @@ block content
         div.form-input
             label(for='date') Day the Pet was Lost:
             input(type='date' id='date' name='date' value=pet.date)
+        div.form-input
+            label(for='type') Type of Animal
+            select(name ='type' id='type' autocomplete='off')
+                option(value = "dog") Dog
+                option(value = "cat") cat
+                option(value = "other") other
         button.button(class="submit" type='submit') Submit
-        a.button(class="delete" href=`/delete/${pet.id}`) Delete
+        a.button(class="found" href=`/delete/${pet.id}`) Report as Found
         a.button(class="cancel" href='/') Cancel

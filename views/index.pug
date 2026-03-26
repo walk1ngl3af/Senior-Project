@@ -1,17 +1,19 @@
 extends layout
 
 block content
-  div.container
-    div.filter-input
-      form(action='/' method='get')
-        div.form-input
-          label(class="filterLabel" for='type') Type of animal
-          select(id='type' name='type' autocomplete='off')
-            each type in types
-              option(value=type selected=(type === searchtype)) #{type}
-        button.filter-button(type='submit') Filter
+  h1 Missing Pet Reports
+  p This is the page where you can see and create missing pet reports.
+  div.filter-input
+    form(action='/' method='get')
+      div.form-input
+        label(class="filterLabel" for='type') Type of animal
+        select(id='type' name='type' autocomplete='off')
+          each type in types
+            option(value=type selected=(type === searchtype)) #{type}
+      button.filter-button(type='submit') Filter
   if user
     a(class="addButton" href='/add') Add pet
+  p
   div.card-container
     each pet in pets
       div.card
@@ -26,10 +28,8 @@ block content
           div.bottom
             div.cardInformation
               div.specifics
-                div.lastKnownLocation
-                  p= `Last Known Location: ${pet.location}`
-                div.date
-                  p= `Lost Since: ${pet.date}`
+                p.lastKnownLocation= `Last Known Location: ${pet.location}`
+                p.date= `Lost Since: ${pet.date}`
               div.contactInfo
                 p.phoneNumber= `Phone Number: ${pet.phone}`
           if user
