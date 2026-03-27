@@ -215,7 +215,7 @@ nav li a:hover{
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .lastKnownLocation {
@@ -281,6 +281,7 @@ nav li a:hover{
   display: flex;
   justify-content: left;
   border-radius: 10px;
+  margin-bottom: 16px;
 
 }
 
