@@ -47,7 +47,11 @@ module.exports.addPet = async function(req, res) {
 
 module.exports.renderEditPet = async function(req, res) {
     const pet = await Pet.findByPk(req.params.id);
-    res.render('edit', {pet});
+    let searchtypes = [];
+    for(let i = 0; i<types.length; i++) {
+        searchtypes.push(types[i]);
+    }
+    res.render('edit', {pet, searchtypes});
 }
 
 module.exports.updatePet = async function(req, res) {

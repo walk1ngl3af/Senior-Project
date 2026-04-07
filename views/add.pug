@@ -16,6 +16,11 @@ block content
             label(for='image') Image:
             input(type='text' name='image' id='image')
         div.form-input
+            label(for='type') Type of Animal
+            select(name ='type' id='type' autocomplete='off')
+                each type in types
+                    option(value=type selected=(type === searchtype) autocomplete='off') #{type}
+        div.form-input
             label(for='location') Last Known Location:
             input(type='text' name='location' id='location')
         div.form-input
@@ -23,11 +28,6 @@ block content
             input(type='text' name='phone' id='phone')
         div.form-input
             label(for='date') Day the Pet was Lost:
-            input(type='date' id='date' name='date')
-        div.form-input
-            label(for='type') Type of Animal
-            select(name ='type' id='type' autocomplete='off')
-                each type in types
-                    option(value=type selected=(type === searchtype) autocomplete='off') #{type}
+            input(type='text' id='date' name='date' placeholder='year-month-day')
         button.button(class="submit" type='submit') Submit
         a.button(class="cancel" href='/') Cancel
