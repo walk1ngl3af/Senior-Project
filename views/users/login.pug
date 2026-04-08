@@ -4,7 +4,9 @@ block content
     div.loginIn
         div.loginTop
             h3 Login
-            a(href='/register') or create an account
+            p
+                |If you don't have an account
+                a(href='/register')  register
         div.loginBottom(style="display:flex;")
             form(action='/login' method='post' style="flex-direction: row;")
                 div.email

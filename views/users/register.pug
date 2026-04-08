@@ -4,8 +4,9 @@ block content
     div
         h3 Register
         div.registerTop
-            p If you already have an account
-            a(href='/login') sign in
+            p
+                |If you already have an account
+                a(href='/login')  sign in
         form(action='/register' method='post')
             div.registerName
                 input(type='text' name='name' id='name' placeholder='Name')

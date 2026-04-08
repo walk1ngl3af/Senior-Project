@@ -12,22 +12,23 @@ body {
 }
 
 /* region Nav-Bar */
+
 a {
   color: #00B7FF;
   text-decoration: none;
 }
 
-nav{
+nav {
   width: 100%;
   background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ccbebe;
   position: fixed;
 }
 
-nav ul{
+nav ul {
   display: flex;
   margin: 0;
   list-style: none;
@@ -36,9 +37,11 @@ nav ul{
   text-align: center;
 }
 
-.the-title{
+.the-title {
   font-size: 20px;
+  border-right: 1px solid red; /* figure out how to add a separating border between the title and the rest of the nav or differentiate it in another way */
   padding-left: 3%;
+  color: #4b4b51;  /* placeholder */
 }
 
 nav li{
@@ -46,22 +49,20 @@ nav li{
   align-content: center;
 }
 
-nav li a{
+nav li a {
   display: block;
   padding: 10%;
   color: #0083cd;
   font-size: 18px;
 }
 
-nav li a:hover{
-  /* Change the text color to something better  */
-  color: #0700cd;
+nav li a:hover {
+  color: #007dc3;
   background-color: #f1f1f1;
-  border-radius: 15px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
-.nav-content{
+.nav-content {
   max-width: 1300px;
   width: 100%;
 }
