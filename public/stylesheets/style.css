@@ -40,9 +40,9 @@ nav ul {
 .the-title {
   font-size: 20px;
   max-width: 10%;
-  border-right: 1px solid red; /* figure out how to add a separating border between the title and the rest of the nav or differentiate it in another way */
+  border-right: 1px solid red;
   padding-left: 3%;
-  color: #4b4b51;  /* placeholder */
+  color: #4b4b51;
 }
 
 nav li{
@@ -391,8 +391,7 @@ label{
 /* region Register */
 
 .registerTop {
-  display: flex;
-  flex-wrap: nowrap;
+
 }
 
 .registerName {
