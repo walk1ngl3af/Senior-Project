@@ -10,10 +10,10 @@ block content
             input(type='text' name='description' id='description' value=sighting.description)
         div.form-input
             label(for='image') Image:
-            input(type='text' name='image' id='image' value=sighting.image)
+            input(type='text' name='image' id='image' value=sighting.image required)
         div.form-input
             label(for='location') Location:
-            input(type='text' name='location' id='location' value=sighting.location)
+            input(type='text' name='location' id='location' value=sighting.location required)
         button.button(class="submit" type='submit') Submit
         a.button(class="delete" href=`/deleteSightings/${sighting.id}`) Delete
         a.button(class="cancel" href='/forum') Cancel

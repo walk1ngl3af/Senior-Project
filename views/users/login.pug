@@ -10,9 +10,9 @@ block content
         div.loginBottom(style="display:flex;")
             form(action='/login' method='post' style="flex-direction: row;")
                 div.email
-                    input(type='text' name='email' id='email' placeholder='Email')
+                    input(type='text' name='email' id='email' placeholder='Email' required)
                 div.password
-                    input(type='text' name='password' id='password' placeholder='Password')
+                    input(type='text' name='password' id='password' placeholder='Password' required)
                 button.button(type='submit') Log In
             if error
                 p.error=error

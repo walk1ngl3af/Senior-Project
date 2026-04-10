@@ -11,7 +11,7 @@ block content
             input(type='text' name='name' id='name' value=pet.name)
         div.form-input
             label(for='description') Description:
-            input(type='text' name='description' id='description' value=pet.description)
+            input(type='text' name='description' id='description' value=pet.description required)
         div.form-input
             label(for='image') Image:
             input(type='text' name='image' id='image' value=pet.image)
@@ -20,13 +20,13 @@ block content
             input(type='text' name='location' id='location' value=pet.location)
         div.form-input
             label(for='phone') Phone Number:
-            input(type='text' name='phone' id='phone' value=pet.phone)
+            input(type='text' name='phone' id='phone' value=pet.phone required)
         div.form-input
             label(for='date') Day the Pet was Lost:
             input(type='text' id='date' name='date' value=pet.date)
         div.form-input
             label(for='type') Type of Animal
-            select(name ='type' id='type' autocomplete='off')
+            select(name ='type' id='type' autocomplete='off' required)
                 option(value = "dog") Dog
                 option(value = "cat") cat
                 option(value = "other") other

@@ -28,7 +28,8 @@ block content
             div.cardInformation
               div.specifics
                 p.lastKnownLocation= `Last Known Location: ${pet.location}`
-                p.date= `Lost Since: ${pet.date}`
+                if pet.date
+                  p.date= `Lost Since: ${pet.date}`
               div.contactInfo
                 p.phoneNumber= `Phone Number: ${pet.phone}`
           if user

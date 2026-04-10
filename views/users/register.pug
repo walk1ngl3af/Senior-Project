@@ -2,18 +2,19 @@ extends ../layout
 
 block content
     div
-        h3 Register
         div.registerTop
+            h3 Register
             p
                 |If you already have an account
                 a(href='/login')  sign in
         form(action='/register' method='post')
             div.registerName
-                input(type='text' name='name' id='name' placeholder='Name')
-            div.registerPassword
-                input(type='text' name='password' id='password' placeholder='Password')
+                input(type='text' name='name' id='name' placeholder='Name' required)
             div.registerEmail
-                input(type='text' name='email' id='email' placeholder='Email')
+                input(type='text' name='email' id='email' placeholder='Email' required)
+            div.registerPassword
+                input(type='text' name='password' id='password' placeholder='Password' required)
+
             div
                 button.button(type='submit') Create Account
         if error

@@ -27,7 +27,8 @@ block content
                     div.bottom
                         div.sightingInfo
                             p.address= `Last seen: ${sighting.location}`
-                            p.date= `Sighted on ${sighting.date}`
+                            if sighting.date
+                                p.date= `Sighted on ${sighting.date}`
                     if user
                         if(user.id === sighting.uzer_id)
                             a(href=`/editSightings/${sighting.id}`) Edit pet

@@ -39,6 +39,7 @@ nav ul {
 
 .the-title {
   font-size: 20px;
+  max-width: 10%;
   border-right: 1px solid red; /* figure out how to add a separating border between the title and the rest of the nav or differentiate it in another way */
   padding-left: 3%;
   color: #4b4b51;  /* placeholder */
@@ -59,7 +60,7 @@ nav li a {
 nav li a:hover {
   color: #007dc3;
   background-color: #f1f1f1;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
 .nav-content {
