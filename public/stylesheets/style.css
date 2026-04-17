@@ -186,9 +186,9 @@ nav li a:hover {
 }
 
 .sightingInfo {
-  background: #d8dada;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.21)
+
 }
 
 .contactInfo {
@@ -213,11 +213,13 @@ nav li a:hover {
 
 .specifics {
   border-radius: 4px;
-  margin-top: 30px;
+  margin-top: 25px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.21)
 }
 
 .lastKnownLocation {
