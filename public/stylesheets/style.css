@@ -165,7 +165,7 @@ nav li a:hover {
   margin-top: 10px;
   margin-bottom: 10px;
   width: 275px;
-  border: 1px solid black;
+  background-color: #ededed;
   border-radius: 4px;
   display: flex;
   flex-wrap: wrap;
@@ -212,22 +212,22 @@ nav li a:hover {
 }
 
 .specifics {
-  border: 1px solid black;
   border-radius: 4px;
-  margin-bottom: 10px;
+  margin-top: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
+  align-items: flex-end;
 }
 
 .lastKnownLocation {
-  border: 1px solid black;
   padding: 8px;
   border-radius: 8px;
 }
 
 .date {
-  /* Figure out how to make this always appear under the location Done*/
+  padding: 8px;
+  border-radius: 8px;
 }
 
 .editButton {

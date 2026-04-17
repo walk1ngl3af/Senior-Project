@@ -26,12 +26,12 @@ block content
               p.description= pet.description
           div.bottom
             div.cardInformation
+              div.contactInfo
+                p.phoneNumber= `Phone Number: ${pet.phone}`
               div.specifics
                 p.lastKnownLocation= `Last Known Location: ${pet.location}`
                 if pet.date
                   p.date= `Lost Since: ${pet.date}`
-              div.contactInfo
-                p.phoneNumber= `Phone Number: ${pet.phone}`
           if user
             if(user.id === pet.uzer_id)
               a(href=`/edit/${pet.id}`) Edit pet
