@@ -269,15 +269,6 @@ nav li a:hover {
   justify-content: center;
 }
 
-.filter {
-  width: 90%;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  background: antiquewhite;
-  border-radius: 5px;
-}
-
 .filter-input {
   padding: 8px;
   border: 1px solid black;
@@ -464,8 +455,6 @@ label{
   margin-bottom: 2.5%;
   border-radius: 10px;
 }
-
-
 
 /* region Dog div */
 
