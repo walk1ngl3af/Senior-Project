@@ -40,8 +40,8 @@ nav ul {
 .the-title {
   font-size: 20px;
   max-width: 10%;
-  border-right: 1px solid red;
-  padding-left: 3%;
+  text-align: left;
+  padding-left: 1%;
   color: #4b4b51;
 }
 
@@ -70,7 +70,6 @@ nav li a:hover {
 
 .name {
   font-size: 18px;
-  border: 1px solid black;
   margin-left: 15%;
   max-width: 75%;
   display: flex;
@@ -79,7 +78,7 @@ nav li a:hover {
 }
 
 .name:hover {
-  border: 3px solid black;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
 /* endregion Nav-Bar */
@@ -186,9 +185,9 @@ nav li a:hover {
 }
 
 .sightingInfo {
+  background: #d8dada;
   text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.21)
-
+  border: 1px solid black;
 }
 
 .contactInfo {
@@ -212,14 +211,13 @@ nav li a:hover {
 }
 
 .specifics {
-  border-radius: 4px;
-  margin-top: 25px;
-  margin-bottom: 20px;
+  background-color: rgba(204, 188, 188, 0.22);
+  border-radius: 10px;
+  margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.21)
+  align-items: flex-end;
 }
 
 .lastKnownLocation {
@@ -267,17 +265,18 @@ nav li a:hover {
   padding-bottom: 5px;
   display: flex;
   justify-content: center;
+  font-size: 25px;
 }
 
 .filter-input {
   padding: 8px;
-  border: 1px solid black;
-  max-width: 10%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  background: #d8f4ff;
+  max-width: 20%;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   border-radius: 10px;
   margin-bottom: 16px;
-
 }
 
 .filter:hover {
@@ -290,6 +289,11 @@ nav li a:hover {
   border: 2px solid royalblue;
   color: white;
   border-radius: 5px;
+  font-size:20px;
+}
+
+.filter-select {
+  font-size: 20px;
 }
 
 /* region Dropdown Menu */
@@ -455,6 +459,8 @@ label{
   margin-bottom: 2.5%;
   border-radius: 10px;
 }
+
+
 
 /* region Dog div */
 

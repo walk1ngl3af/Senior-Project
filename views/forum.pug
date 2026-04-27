@@ -8,7 +8,7 @@ block content
     div.filter-input
         form(action='/forum' method='get')
             div.form-input
-                label(class="filterLabel" for='type') Type of animal
+                label(class="filterLabel" for='type') Type of Animal
                 select(id='type' name='type' autocomplete='off')
                     each type in types
                         option(value=type selected=(type === searchtype)) #{type}
