@@ -2,7 +2,7 @@ extends layout
 
 block content
     h1 Sightings of Animals
-    p This is the page where you can post and search for animal sightings
+    p This is the page where you can post and search for animal sightings. You must <i><b>login/register</i></b> to post sighting posters.
     if user
         a(class="addButton" href='/addSightings') Add pet
     div.filter-input
@@ -12,7 +12,7 @@ block content
                 select(id='type' name='type' autocomplete='off')
                     each type in types
                         option(value=type selected=(type === searchtype)) #{type}
-            button.filter-button(type='submit') Filter
+                button.filter-button(type='submit') Filter
     div.card-container
         each sighting in sightings
             div.card

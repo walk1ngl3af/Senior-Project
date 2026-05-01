@@ -289,8 +289,8 @@ nav li a:hover {
   border: 2px solid royalblue;
   color: white;
   border-radius: 5px;
-  margin-left: 25px;
   font-size:20px;
+  margin-left: 25px;
 }
 
 .filter-select {
@@ -414,11 +414,11 @@ label{
 
 /* region Dog Image */
 .dogImage {
-  padding: 4px;
+  padding: 5px;
   display: flex;
   justify-content: flex-end;
-  width: auto;
-  height: 50%;
+  width: 100%;
+  height: auto;
 }
 
 .petInfo1 {
@@ -456,6 +456,7 @@ label{
 }
 
 .petInformation {
+  padding: 8px;
   border: 1px solid red;
   margin-bottom: 2.5%;
   border-radius: 10px;
@@ -478,17 +479,19 @@ label{
 }
 
 .dogBehavior {
+  padding: 8px;
   border: 1px solid orange;
   display: flex;
   flex-wrap: wrap;
   border-radius: 10px;
-  margin-right: 1.5%;
+  margin-right: 12.25%;
   line-height: 2;
 }
 
 .dogRetrieval {
+  padding: 8px;
   border: 1px solid pink;
-  margin-right: 1.5%;
+  margin-right: 12.25%;
   border-radius: 10px;
   line-height: 2;
 }
