@@ -13,15 +13,15 @@ block content
                     option(value=type selected=(type === searchtype) autocomplete='off') #{type}
         div.form-input
             label(for='description') Description:
-            input(type='text' name='description' id='description')
+            textarea(name='description' id='description' rows='8' cols='25' required placeholder='Physical characteristics, Appearance, Etc.')
         div.form-input
             label(for='image') Image:
-            input(type='text' name='image' id='image' required)
+            input(type='text' name='image' id='image' required placeholder='URL')
         div.form-input
             label(for='date') Date:
             input(type='text' name='date' id='date' placeholder='year-month-day')
         div.form-input
-            label(for='location') Location:
-            input(type='text' name='location' id='location' required)
+            label(for='location') Location Of Sighting:
+            input(type='text' name='location' id='location' required placeholder='State, City, Street')
         button.button(class="submit" type='submit') Submit
         a.button(class="cancel" href='/forum') Cancel

@@ -7,7 +7,7 @@ block content
             input(type='text' name='date' id='date' value=sighting.date)
         div.form-input
             label(for='description') Description:
-            input(type='text' name='description' id='description' value=sighting.description)
+            textarea(name='description' id='description' rows='8' cols='25' required) #{sighting.description}
         div.form-input
             label(for='image') Image:
             input(type='text' name='image' id='image' value=sighting.image required)

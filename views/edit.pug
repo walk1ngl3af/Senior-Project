@@ -11,7 +11,7 @@ block content
             input(type='text' name='name' id='name' value=pet.name)
         div.form-input
             label(for='description') Description:
-            input(type='text' name='description' id='description' value=pet.description required)
+            textarea(type='text' name='description' rows='8' cols='25' id='description' required) #{pet.description}
         div.form-input
             label(for='image') Image:
             input(type='text' name='image' id='image' value=pet.image)
